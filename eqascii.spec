@@ -47,14 +47,12 @@ install eqascii.3 $RPM_BUILD_ROOT%{_mandir}/man3
 install eqascii.a $RPM_BUILD_ROOT%{_libdir}
 install eqascii.h $RPM_BUILD_ROOT%{_includedir}
 
-gzip -9nf HISTORY
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz test
+%doc HISTORY test
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
