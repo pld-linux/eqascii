@@ -2,7 +2,7 @@ Summary:	EQuation ASCII renderer
 Summary(pl):	Program wy¶wietlaj±cy równania jako ASCII
 Name:		eqascii
 Version:	0.3.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	http://dione.ids.pl/~pborys/software/linux/%{name}-%{version}.tar.gz
@@ -16,7 +16,8 @@ It outputs the result to stdout.
 
 %description -l pl
 eqascii jest programem wy¶wietlaj±cym równania przy u¿yciu znaków
-ASCII, przyjmuj±cym równania w notacji podobnej do LaTeXa.
+ASCII, przyjmuj±cym w linii poleceñ równania w notacji podobnej do
+LaTeXa.
 
 %package devel
 Summary:	EQuation ASCII renderer for programmers
@@ -36,7 +37,8 @@ przydatne przy pisaniu programów wy¶wietlaj±cych wzory jako ASCII.
 %setup -q -n %{name}
 
 %build
-%{__make} DEBUG="%{rpmcflags}"
+%{__make} \
+	DEBUG="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
