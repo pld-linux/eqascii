@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://dione.ids.pl/~pborys/software/linux/%{name}-%{version}.tar.gz
+# Source0-md5:	71b79c3d3987ed125293e9b6e0bd017c
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
