@@ -1,12 +1,12 @@
 Summary:	EQuation ASCII renderer
 Summary(pl):	Program wy¶wietlaj±cy równania jako ASCII
 Name:		eqascii
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
+License:	GPL
 Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(pl):	Aplikacje/Tekst
-License:	GPL
 Source0:	http://dione.ids.pl/~pborys/software/linux/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
