@@ -25,8 +25,12 @@ Summary:	EQuation ASCII renderer for programmers
 Summary(pl):	Biblioteka do zamiany rСwnaЯ na postaФ ASCII
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 # note:	there is no reason to require eqascii
 
 %description devel
