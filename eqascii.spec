@@ -5,9 +5,6 @@ Version:	0.3.1
 Release:	2
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://dione.ids.pl/~pborys/software/linux/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,13 +21,6 @@ ASCII, przyjmuj╠cym rСwnania w notacji podobnej do LaTeXa.
 Summary:	EQuation ASCII renderer for programmers
 Summary(pl):	Biblioteka do zamiany rСwnaЯ na postaФ ASCII
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 # note:	there is no reason to require eqascii
 
 %description devel
