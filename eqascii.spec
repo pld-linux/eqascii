@@ -1,5 +1,5 @@
 Summary:	EQuation ASCII renderer
-Summary(pl.UTF-8):   Program wyświetlający równania jako ASCII
+Summary(pl.UTF-8):	Program wyświetlający równania jako ASCII
 Name:		eqascii
 Version:	0.3.1
 Release:	3
@@ -21,7 +21,7 @@ LaTeXa.
 
 %package devel
 Summary:	EQuation ASCII renderer for programmers
-Summary(pl.UTF-8):   Biblioteka do zamiany równań na postać ASCII
+Summary(pl.UTF-8):	Biblioteka do zamiany równań na postać ASCII
 Group:		Development/Libraries
 # note:	there is no reason to require eqascii
 
