@@ -1,5 +1,5 @@
 Summary:	EQuation ASCII renderer
-Summary(pl):	Program wy¶wietlaj±cy równania jako ASCII
+Summary(pl.UTF-8):   Program wyÅ›wietlajÄ…cy rÃ³wnania jako ASCII
 Name:		eqascii
 Version:	0.3.1
 Release:	3
@@ -14,14 +14,14 @@ eqascii is an ascii equation renderer, which as a command argument
 accepts an equation in a form similar to LaTeX equation description.
 It outputs the result to stdout.
 
-%description -l pl
-eqascii jest programem wy¶wietlaj±cym równania przy u¿yciu znaków
-ASCII, przyjmuj±cym w linii poleceñ równania w notacji podobnej do
+%description -l pl.UTF-8
+eqascii jest programem wyÅ›wietlajÄ…cym rÃ³wnania przy uÅ¼yciu znakÃ³w
+ASCII, przyjmujÄ…cym w linii poleceÅ„ rÃ³wnania w notacji podobnej do
 LaTeXa.
 
 %package devel
 Summary:	EQuation ASCII renderer for programmers
-Summary(pl):	Biblioteka do zamiany równañ na postaæ ASCII
+Summary(pl.UTF-8):   Biblioteka do zamiany rÃ³wnaÅ„ na postaÄ‡ ASCII
 Group:		Development/Libraries
 # note:	there is no reason to require eqascii
 
@@ -29,9 +29,9 @@ Group:		Development/Libraries
 Package contains static library, header file and documentation useful
 for developing programs that draw equations in text mode.
 
-%description devel -l pl
-Pakiet zawiera bibliotekê statyczn±, plik nag³ówkowy i dokumentacjê
-przydatne przy pisaniu programów wy¶wietlaj±cych wzory jako ASCII.
+%description devel -l pl.UTF-8
+Pakiet zawiera bibliotekÄ™ statycznÄ…, plik nagÅ‚Ã³wkowy i dokumentacjÄ™
+przydatne przy pisaniu programÃ³w wyÅ›wietlajÄ…cych wzory jako ASCII.
 
 %prep
 %setup -q -n %{name}
