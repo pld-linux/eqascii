@@ -2,11 +2,12 @@ Summary:	EQuation ASCII renderer
 Summary(pl.UTF-8):	Program wyświetlający równania jako ASCII
 Name:		eqascii
 Version:	0.3.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Text
 Source0:	http://dione.ids.pl/~pborys/software/linux/%{name}-%{version}.tar.gz
 # Source0-md5:	71b79c3d3987ed125293e9b6e0bd017c
+Patch0:		%{name}-implicit-decls.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,10 +36,11 @@ przydatne przy pisaniu programów wyświetlających wzory jako ASCII.
 
 %prep
 %setup -q -n %{name}
+%patch -P0 -p1
 
 %build
 %{__make} \
-	DEBUG="%{rpmcflags}"
+	DEBUG="%{rpmcflags} %{rpmcppflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

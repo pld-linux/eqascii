@@ -1,0 +1,129 @@
+diff -urN eqascii.orig/array.c eqascii/array.c
+--- eqascii.orig/array.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/array.c	2026-05-21 01:24:26.579552353 +0200
+@@ -6,6 +6,7 @@
+ #include "utils.h"
+ #include "variables.h"
+ #include "dim.h"
++#include "draw.h"
+ 
+ #define USE_SPACING
+ 
+diff -urN eqascii.orig/dealloc.c eqascii/dealloc.c
+--- eqascii.orig/dealloc.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/dealloc.c	2026-05-21 01:24:57.846219019 +0200
+@@ -1,5 +1,6 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
++#include <stdlib.h>
+ #include "variables.h"
+ 
+ void dealloc(struct Tgraph *graph)
+diff -urN eqascii.orig/dim.c eqascii/dim.c
+--- eqascii.orig/dim.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/dim.c	2026-05-21 01:24:33.226219019 +0200
+@@ -13,6 +13,8 @@
+ #include "prod.h"
+ #include "brace.h"
+ #include "array.h"
++#include "int.h"
++#include "oint.h"
+ 
+ Tdim
+ dim (char *txt, struct Tgraph *graph)
+diff -urN eqascii.orig/draw.c eqascii/draw.c
+--- eqascii.orig/draw.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/draw.c	2026-05-21 01:24:19.606219019 +0200
+@@ -1,6 +1,7 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "variables.h"
+ #include "utils.h"
+ #include "frac.h"
+diff -urN eqascii.orig/frac.c eqascii/frac.c
+--- eqascii.orig/frac.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/frac.c	2026-05-21 01:24:40.112885686 +0200
+@@ -1,11 +1,13 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include "variables.h"
+ #include "utils.h"
+ #include "frac.h"
+ #include "dim.h"
++#include "draw.h"
+ 
+ int
+ dimFrac (char *found, char **Gpos, Tdim * Our, struct Tgraph *graph)
+diff -urN eqascii.orig/oint.h eqascii/oint.h
+--- eqascii.orig/oint.h	2001-04-13 20:10:36.000000000 +0200
++++ eqascii/oint.h	2026-05-21 01:24:46.239552353 +0200
+@@ -5,6 +5,6 @@
+ 
+ #include "variables.h"
+ int dimOint (char *found, char **Gpos, Tdim * Our, struct Tgraph *graph);
+-void drawIint (int *Kid, int *Curx, int *Cury, char ***screen, struct Tgraph *graph);
++void drawOint (int *Kid, int *Curx, int *Cury, char ***screen, struct Tgraph *graph);
+ 
+ #endif
+diff -urN eqascii.orig/sqrt.c eqascii/sqrt.c
+--- eqascii.orig/sqrt.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/sqrt.c	2026-05-21 01:25:05.979552352 +0200
+@@ -1,9 +1,11 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
++#include <stdlib.h>
+ #include <string.h>
+ #include "utils.h"
+ #include "variables.h"
+ #include "dim.h"
++#include "draw.h"
+ 
+ int
+ dimSqrt (char *found, char **Gpos, Tdim * Our, struct Tgraph *graph)
+diff -urN eqascii.orig/subscript.c eqascii/subscript.c
+--- eqascii.orig/subscript.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/subscript.c	2026-05-21 01:25:12.959552352 +0200
+@@ -1,10 +1,12 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
+ 
++#include <stdlib.h>
+ #include <string.h>
+ #include "utils.h"
+ #include "variables.h"
+ #include "dim.h"
++#include "draw.h"
+ 
+ int
+ dimSubscript (char *found, char **Gpos, Tdim * Our, struct Tgraph *graph)
+diff -urN eqascii.orig/superscript.c eqascii/superscript.c
+--- eqascii.orig/superscript.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/superscript.c	2026-05-21 01:25:19.412885685 +0200
+@@ -1,9 +1,11 @@
+ /* This code is distributed under the terms of Gnu Publice License */
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
++#include <stdlib.h>
+ #include <string.h>
+ #include "utils.h"
+ #include "variables.h"
+ #include "dim.h"
++#include "draw.h"
+ 
+ int
+ dimSuperscript (char *found, char **Gpos, Tdim * Our, struct Tgraph *graph)
+diff -urN eqascii.orig/utils.c eqascii/utils.c
+--- eqascii.orig/utils.c	2001-04-13 20:10:30.000000000 +0200
++++ eqascii/utils.c	2026-05-21 01:24:13.979552354 +0200
+@@ -2,6 +2,7 @@
+ /* The author is Przemek Borys <pborys@dione.ids.pl> */
+ #include "utils.h"
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ 
+ char *
